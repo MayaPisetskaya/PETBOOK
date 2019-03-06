@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PETBOOK</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.indigo-pink.min.css">
+  <link rel="stylesheet" href="src/css/app.css">
+  <link rel="stylesheet" href="src/css/feed.css">
+  <link rel="stylesheet" href="src/css/bootstrap.min.css">
+  <!-- Manifest works on andriod but not ios -->
+  <link rel="manifest" href="manifest.json">
+  <!-- For ios we use this instead of the manifest -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="AnAppName">
+  <link rel="apple-touch-icon" href="src/images/icons/logo57x57.png" sizes="57x57">
+  <link rel="apple-touch-icon" href="src/images/icons/logo60x60.png" sizes="60x60">
+  <link rel="apple-touch-icon" href="src/images/icons/logo72x72.png" sizes="72x72">
+  <link rel="apple-touch-icon" href="src/images/icons/logo76x76.png" sizes="76x76">
+  <link rel="apple-touch-icon" href="src/images/icons/logo114x114.png" sizes="114x114">
+  <link rel="apple-touch-icon" href="src/images/icons/logo120x120.png" sizes="120x120">
+  <link rel="apple-touch-icon" href="src/images/icons/logo144x144.png" sizes="144x144">
+  <link rel="apple-touch-icon" href="src/images/icons/logo152x152.png" sizes="152x152">
+  <link rel="apple-touch-icon" href="src/images/icons/logo180x180.png" sizes="180x180">
+  <!-- For Explorer add more meta tags -->
+  <meta name="msapplication-TileImage" content="src/images/icons/logo144x144.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  <!-- addabove to all app pages -->
+</head>
+
+<body>
+  <div id="app">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <!-- Title on top of the page -->
+          <span class="mdl-layout-title"></span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation. We hide it in small screens. ***These dont show up on mobile view?*** -->
+          <nav class="mdl-navigation mdl-layout--large-screen-only">
+            <a class="mdl-navigation__link" href="/">Settings</a>
+            <a class="mdl-navigation__link" href="/help">Help</a>
+            <div class="drawer-option">
+              <button class="enable-notifications mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-color--accent">
+              Sign Out
+              </button>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">PETBOOK</span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="index.html">Home</a>
+          <a class="mdl-navigation__link" href="/">Settings</a>
+          <a class="mdl-navigation__link" href="/help">Help</a>
+          <div class="drawer-option">
+            <button class="enable-notifications mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-color--accent">
+            Sign Out
+            </button>
+          </div>
+        </nav>
+      </div>
+      <main class="mdl-layout__content mat-typography">
+        <div id="create-post">
+          <!-- This is a form within the plus menu -->
+          <form>
+            <div class="input-section mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input class="mdl-textfield__input" type="text" id="title">
+              <label class="mdl-textfield__label" for="title" name="title">Name</label>
+            </div>
+            <div class="input-section mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="manual-location">
+              <input class="mdl-textfield__input" type="text" id="location">
+              <label class="mdl-textfield__label" for="location" name="location">Email</label>
+            </div>
+            <br/>
+            <div>
+              <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-color--accent" type="submit" id="post-btn">Send
+              </button>
+            </div>
+            <br/>
+            <div>
+              <button class="mdl-button mdl-js-button mdl-button--fab" id="close-create-post-modal-btn" type="button">
+                <i class="material-icons">close</i>
+              </button>
+            </div>
+          </form>
+        </div>
+        <!-- Banner image -->
+        <img src="src/images/header.png" alt="Welcone to PETBOOK" class="main-image">
+        
+          <!-- Progress bar -->
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" style="width: 33%;" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">reason for visit</div>
+          <div class="progress-bar bg-success" role="progressbar" style="width: 33%;" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">pick a time</div>
+          <div class="progress-bar bg-info" role="progressbar" style="width: 33%;" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">confirm</div>
+        </div>
+
+        <!-- Bootstrap layout -->
+
+        <!-- Confirmation Text -->
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h4>Appointment location</h4>
+              <p>
+                Queen West Animal Hospital<br/> 1200 Queen Street West<br/> Toronto, Ontario
+              </p>
+            </div>
+            <div class="col-12">
+              <h4>Appointment date and time</h4>
+              <p>
+                April 19, 2019<br/>6:30PM
+              </p>
+              <a href=index.html><button type="button" class="btn btn-outline-primary btn-block">Confirm</button><br/></a>
+            </div>
+            
+            <!-- Success Alert ***Need JS to make usable***-->
+            <div class="alert alert-success col-12" role="alert">
+              Your appointment is<a href="#" class="alert-link"> confirmed</a>
+            </div>
+          </div>
+        </div>
+
+
+
+        <!-- Plus button in the bottom corner -->
+        <div class="floating-button">
+          <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored" id="share-image-button">
+          <i class="material-icons">add</i>
+          </button>
+        </div>
+        <div id="confirmation-toast" aria-live="assertive" aria-atomic="true" aria-relevant="text" class="mdl-snackbar mdl-js-snackbar">
+          <div class="mdl-snackbar__text"></div>
+          <button type="button" class="mdl-snackbar__action"></button>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="src/js/bootstrap.bundle.min.js"></script>
+  <script defer src="src/js/material.min.js"></script>
+  <script src="src/js/app.js"></script>
+  <script src="src/js/feed.js"></script>
+</body>
+</html>
